@@ -39,13 +39,17 @@ function printQuote() {
   let html = getRandomQuote(quotes);
   let pTagQuote = `<p class="quote">${html.quote}</p>`
   let pTagSource = `<p class="source">${html.source}`
+  let pTag =  `<p class="tag">${html.tag}</p>`
+  if (html.tag) {
+    pTag =  `<p class="tag">${html.tag}</p>`
+  }
   if (html.citation) {
     pTagSource +=  `<span class="citation">${html.citation}</span>`
   }
   if (html.year) {
     pTagSource += `<span class="year">${html.year}</span></p>`
   } else { pTagSource += "</p>" }
-  let quote = pTagQuote + pTagSource;
+  let quote = pTag + pTagQuote + pTagSource;
   document.getElementById('quote-box').innerHTML = quote;
 }
 

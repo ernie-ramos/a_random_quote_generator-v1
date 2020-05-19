@@ -30,19 +30,22 @@ let quote = "";
  * @var {string} randomQuote - Uses randomNumber as an index value.
  * @return {string} Returns the index value called in randomQuote.
  */
+
 function getRandomQuote(quotes) {
+  // credit to: Guil Hernandez (JavaScript Functions-Return a Value from a Function)
   randomNumber = Math.floor(Math.random() * quotes.length);
   randomQuote = quotes[randomNumber];
-  //console.log(randomQuote)
   return randomQuote;
 }
 
 // @return {number} Returns a random number between 0 and 256.
+// credit to: Dave McFarland (JavaScript Loops, Arrays and Objects-The Refactor Challenge, Part 2)
 function randomRGB() {
   return Math.floor(Math.random() * 256)
 }
 
 // @return {string} Returns 'rbg(xxx, xxx, xxx)'
+// credit to: Dave McFarland (JavaScript Loops, Arrays and Objects-The Refactor Challenge, Part 2)
 function randomColor() {
   color = 'rgb(';
   color += `${randomRGB()}, `;

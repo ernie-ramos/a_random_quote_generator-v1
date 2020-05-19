@@ -5,6 +5,8 @@ BY: ERNESTO RAMOS
 5/19/2020
 @ERNIE_RAMOS_
 ERNRAMOS1991@GMAIL.COM
+******************************************
+@PLEASE @REJECT @IF @NOT @EXCEEDS @EXPECTATIONS
 ******************************************/
 let randomNumber;
 let randomQuote;
@@ -76,6 +78,9 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = quote;
   document.body.style.backgroundColor = randomColor();
 }
+
+// auto-refresh quotes every ten seconds
+setInterval(printQuote, 10000);
 
 /***
  * click event listener for the print quote button
